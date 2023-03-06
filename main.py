@@ -3,27 +3,27 @@ import time
 
 
 eng_words = ['Hi','Bye','Task', 'Programm']
-fr_words = ['Salut','Au revoir','Tâche', 'Programme']
+in_words = ['Halo','Sampai jumpa','Tugas', 'Program']
 score = 0
 
-mode = input("Pick a mode: 0 - add new words, 1 - training: \n")
+mode = input("Pilih mode: 0 - tambahkan kata baru, 1 - pelatihan: \n")
 while ((mode != '0') and (mode != '1')):
-    mode = input("Invalid dymbol! Pick either 0 or 1. (0 adds new words, while 1 enables training) \n")
+    mode = input("Simbol tidak valid! Pilih antara 0 atau 1. (0 menambahkan kata baru, sedangkan 1 mengaktifkan pelatihan) \n")
 
 if mode == "1":
-    print("Translate as many words as you can! You have 10 attempts!")
+    print("Terjemahkan kata sebanyak mungkin! Kamu punya 10 kesempatan!")
     for i in range(10):
         number = random.randint(0, len(eng_words))
-        print("How should we translate: " + eng_words[number])
+        print("Bagaimana seharusnya kita menerjemahkan: " + eng_words[number])
         if input() == fr_words[number]:
-            print("Great!!!")
+            print("Hebat!!!")
             score += 1
         else:
-            print("Nope, not quite... The correct word is - " + eng_words[number])
+            print("Tidak, tidak mendekati... Kata yang benar adalah - " + eng_words[number])
 else:
-    word = input("Type in an English word: ")
-    translate = input("Type in this word's translation: ")
+    word = input("Ketik kata bahasa Inggris: ")
+    translate = input("Ketik terjemahan kata ini: ")
     if len(word) > 0 and len(translate) > 0:
         eng_words.append(word)
         fr_words.append(translate)
-        print("The word was added successfully!")
+        print("Kata berhasil ditambahkan!")
