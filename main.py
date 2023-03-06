@@ -25,5 +25,5 @@ else:
     translate = input("Ketik terjemahan kata ini: ")
     if len(word) > 0 and len(translate) > 0:
         eng_words.append(word)
-        fr_words.append(translate)
+        in_words.append(translate)
         print("Kata berhasil ditambahkan!")
